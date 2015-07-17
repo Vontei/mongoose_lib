@@ -1,8 +1,10 @@
 <% include partials/header %>
-<h1>See some information about <%= book.title%></h1>
+<h1>See some information about <%= book.title %></h1>
 <p>
-  <%= book.author%>
-  <%= book.year%>
+  <%=book.author%>
+  <%=book.year%>
 </p>
+<a href='/books/<%=book._id%>/edit'>Edit</a>
+<br>
 <a href="/">Go home</a>
 <% include partials/footer %>
