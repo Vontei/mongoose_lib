@@ -77,7 +77,7 @@ app.get('/books/:id/edit', function(req,res){
 app.put('/books/:id', function(req,res){
   db.Book.findByIdAndUpdate({_id:req.params.id}, {title: req.body.book.title, author: req.body.book.author,
     year: req.body.book.year}, function(err,data){
-      if(!foundBook){
+      if(!data){
         res.render("404");
       }
     res.redirect('/books');
